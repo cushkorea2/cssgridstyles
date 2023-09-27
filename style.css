@@ -1,0 +1,52 @@
+/* DEFAULT STYLES TO MAKE LESSON PRETTY-ISH */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* Add display: grid; for ul */
+  display: grid;
+  /* Add grid-template-columns for tablets */
+  grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+}
+
+li {
+  padding: 32px;
+  background-color: #667eea;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+li:nth-child(odd) {
+  background-color: #a3bffa;
+}
+
+/* Add a media query for tablets with a min-width of 640px */
+@media screen and (min-width: 640px) {
+  ul {
+    /* No need to redefine display: grid; as it's already set outside the media query */
+    /* Add grid-template-columns for tablets */
+    grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+  }
+}
+
+/* Add a media query for desktop with a min-width of 1024px */
+@media screen and (min-width: 1024px) {
+  ul {
+    /* No need to redefine display: grid; as it's already set outside the media query */
+    /* Add grid-template-columns for desktop */
+    grid-template-columns: 20% 20% 20% 20% 20%;
+  }
+}
